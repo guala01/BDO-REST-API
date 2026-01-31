@@ -17,6 +17,7 @@ func ListenAndServe() {
 	mux.HandleFunc("GET /v1", getStatus)
 	mux.HandleFunc("GET /v1/adventurer", getAdventurer)
 	mux.HandleFunc("GET /v1/adventurer/search", getAdventurerSearch)
+	mux.HandleFunc("POST /v1/adventurer/search/batch", getAdventurerSearchBatch)
 	mux.HandleFunc("GET /v1/cache", getCacheSummary)
 	mux.HandleFunc("GET /v1/cache/{cacheType}", getCache)
 	mux.HandleFunc("GET /v1/guild", getGuild)
